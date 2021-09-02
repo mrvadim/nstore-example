@@ -1,0 +1,280 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.color-primary {
+  color: rgb(0, 123, 255);
+}
+.color-secondary {
+  color: rgb(108, 117, 125);
+}
+.color-success {
+  color: rgb(40, 167, 69);
+}
+.color-warning {
+  color: rgb(255, 193, 7);
+}
+.color-danger {
+  color: rgb(220, 53, 69);
+}
+.color-info {
+  color: rgb(23, 162, 184);
+}
+.color-dark {
+  color: rgb(52, 58, 64);
+}
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1rem;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// flex
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-cx {
+  justify-content: center;
+}
+.flex-cy {
+  align-items: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+// margins
+.center {
+  margin: 0 auto;
+}
+.m-1 {
+  margin: 0.25rem;
+}
+.m-2 {
+  margin: 0.5rem;
+}
+.m-3 {
+  margin: 1rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+.mr-1 {
+  margin-right: 0.25rem;
+}
+// padding
+.p-1 {
+  padding: 0.25rem;
+}
+.pt-1 {
+  padding-top: 0.25rem;
+}
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+.pr-1 {
+  padding-right: 0.25rem;
+}
+.pl-1 {
+  padding-left: 0.25rem;
+}
+// typo
+.title {
+  color: rgb(0, 0, 0);
+}
+.subtitle {
+  color: rgb(177, 177, 177);
+}
+.pre-formatted {
+  white-space: pre-line;
+}
+// ----------------------
+.container {
+  padding: 0 1rem;
+  max-width: 60rem;
+  // border-left: 1px solid black;
+  // border-right: 1px solid black;
+}
+.def-layout {
+  position: relative;
+}
+.notify {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  width: 20rem;
+  background: rgb(255, 255, 255);
+}
+
+// navbar
+.navbar {
+  display: flex;
+  height: 3rem;
+  padding: 0 1rem;
+}
+.navbar .navbar-menu {
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-menu .navbar-item {
+  margin-right: 1rem;
+}
+
+// dropdown
+.dropdown {
+  position: relative;
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 58rem;
+    padding-top: 1rem;
+    z-index: 10;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .dropdown-item {
+      width: 15rem;
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+      > a {
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+        text-transform: capitalize;
+      }
+      .dropdown-subitem {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+      }
+    }
+  }
+  &:hover {
+    .dropdown-content {
+      display: block;
+    }
+  }
+}
+
+.preview {
+  // border: 1px solid black;
+  height: 10rem;
+  // width: 30rem;
+  overflow-x: hidden;
+}
+.image {
+  width: 10rem;
+  height: 10rem;
+}
+.border {
+  border: 1px solid black;
+}
+.square {
+  width: 10rem;
+  height: 10rem;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+.emoji {
+  cursor: pointer;
+}
+.help li {
+  display: inline;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version */
+}

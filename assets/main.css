@@ -1,0 +1,418 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.color-primary {
+  color: rgb(0, 123, 255);
+}
+.color-secondary {
+  color: rgb(108, 117, 125);
+}
+.color-success {
+  color: rgb(40, 167, 69);
+}
+.color-warning {
+  color: rgb(255, 193, 7);
+}
+.color-danger {
+  color: rgb(220, 53, 69);
+}
+.color-info {
+  color: rgb(23, 162, 184);
+}
+.bcolor-info {
+  background-color: rgb(23, 162, 184);
+}
+.color-dark {
+  color: rgb(52, 58, 64);
+}
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+pre,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+input[type="number"] {
+  width: 4rem;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+#__nuxt,
+#__layout,
+.max-height {
+  min-height: 100vh;
+}
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1rem;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* -------------------------------------------- */
+/* grid */
+/* -------------------------------------------- */
+.grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  gap: 0.2rem;
+}
+.grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid-10 {
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.grid-categories {
+  grid-template-columns: 4rem 1fr 4rem;
+}
+.grid-products {
+  grid-template-columns: 1fr 3fr 7rem 1fr;
+}
+.grid-modal {
+  grid-template-columns: 1fr 2fr;
+}
+.grid-categories > a {
+  padding: 0 0.5rem;
+  justify-content: flex-start;
+  display: flex;
+}
+.grid-modal > div,
+.grid-products > div,
+.grid-products > a,
+.grid-categories > a,
+.grid-categories > div {
+  border: 1px solid gray;
+  padding: 0 0.5rem;
+}
+.grid-categories > div,
+.grid-products > div,
+.grid-products > a {
+  justify-content: center;
+}
+.grid-products > .grid-products-name,
+.grid-modal > div {
+  justify-content: flex-start;
+}
+.grid > div {
+  border: 1px solid gray;
+}
+
+/* -------------------------------------------- */
+/* flex */
+/* -------------------------------------------- */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-cx {
+  justify-content: center;
+}
+.flex-sx {
+  justify-content: flex-start;
+}
+.flex-cy {
+  align-items: center;
+}
+.flex-sy {
+  align-items: flex-start;
+}
+.flex-asc {
+  align-self: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-jc-fs {
+  justify-content: flex-start;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 4;
+}
+
+/* -------------------------------------------- */
+/* width*/
+/* -------------------------------------------- */
+.container {
+  padding: 0 1rem;
+  max-width: 80rem;
+}
+.center {
+  margin: 0 auto;
+}
+.w-100 {
+  width: 100%;
+}
+
+/* -------------------------------------------- */
+/* typo */
+/* -------------------------------------------- */
+.bold {
+  font-weight: bold;
+}
+.title {
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+}
+.subtitle {
+  color: rgb(134, 134, 134);
+}
+.pre-formatted {
+  white-space: pre-line;
+}
+pre {
+  background-color: lightgrey;
+  font-size: 9px;
+}
+svg {
+  font-size: 1.5rem;
+}
+
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+
+.def-layout {
+  position: relative;
+}
+.notify {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  width: 20rem;
+  background: rgb(255, 255, 255);
+}
+.info-block {
+  color: rgb(23, 162, 184);
+  border: 1px solid rgb(23, 162, 184);
+}
+.loading {
+  color: lightgray;
+}
+
+/* -------------------------------------------- */
+/* navbar */
+/* -------------------------------------------- */
+.navbar {
+  display: flex;
+  height: 3rem;
+  /* padding: 0 1rem; */
+}
+.navbar .navbar-menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.navbar .navbar-menu .navbar-item {
+  margin-right: 1rem;
+}
+
+.navbar .navbar-menu .navbar-item-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+.preview {
+  height: 10rem;
+  overflow-x: hidden;
+}
+.image {
+  width: 10rem;
+  height: 10rem;
+}
+.border {
+  border: 1px solid lightgray;
+}
+.square {
+  width: 10rem;
+  height: 10rem;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.1s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+.emoji {
+  cursor: pointer;
+}
+.pointer {
+  cursor: pointer;
+}
+.sortable {
+  text-decoration: underline;
+}
+.help li {
+  display: inline;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version */
+}
+
+
+
+/* ------------------ */
+.admin_nav {
+  display: flex;
+}
+.admin_nav li {
+  margin-right: 1rem;
+}
+.admin_nav li:last-child {
+  margin-right: 0rem;
+}
+#categories-tree {
+  padding: 0;
+  margin: 0;
+}
+#categories-tree li {
+  list-style: none;
+}
+#categories-tree .elem > a {
+  /* background-color: rgb(240, 240, 240); */
+}
+#categories-tree .elem:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+/* -------------------------------------------- */
+/* modal */
+/* -------------------------------------------- */
+#modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modal > .window {
+  min-width: 30rem;
+  margin: 2rem;
+  z-index: 10;
+  background: rgb(255, 255, 255);
+  border: 1px solid black;
+}
+#modal > .window > .header {
+  border-bottom: 1px solid black;
+  padding: 1rem 2rem;
+}
+#modal > .window > .body {
+  padding: 1rem 2rem;
+}
+#modal > .window > .footer {
+  border-top: 1px solid black;
+  padding: 1rem 2rem;
+}
+#modal > .background {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.753);
+  position: absolute;
+}
+#modal button {
+  opacity: 1;
+}

@@ -1,0 +1,1 @@
+ALTER TYPE gend RENAME VALUE 'female' TO 'f';

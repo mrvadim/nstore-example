@@ -1,0 +1,25 @@
+@for $i from 1 through 3 {
+  .p-#{$i} {
+    padding: 0.25rem * $i;
+  }
+}
+@for $i from 1 through 3 {
+  .pt-#{$i} {
+    padding-top: 0.25rem * $i;
+  }
+}
+@for $i from 1 through 3 {
+  .pb-#{$i} {
+    padding-bottom: 0.25rem * $i;
+  }
+}
+@for $i from 1 through 3 {
+  .pl-#{$i} {
+    padding-left: 0.25rem * $i;
+  }
+}
+@for $i from 1 through 3 {
+  .pr-#{$i} {
+    padding-right: 0.25rem * $i;
+  }
+}
