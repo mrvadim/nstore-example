@@ -1,4 +1,4 @@
-# n-store
+# nstore
 
 ## Build Setup
 
