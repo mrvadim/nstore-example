@@ -40,6 +40,8 @@ pg_restore -h {{ hostname }} -U postgres --no-owner --role=pguser -d {{
       <p>
         https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
       </p>
+      https://medium.com/maddevs-io/kak-nastroit-apollo-graphql-v-nuxt-prilozhenii-d59d5ec7392a
+      <p></p>
     </div>
   </div>
 </template>
