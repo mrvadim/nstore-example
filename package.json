@@ -10,13 +10,18 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
     "@nuxtjs/auth": "^4.9.1",
     "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/composition-api": "^0.27.0",
     "@nuxtjs/toast": "^3.3.1",
+    "@vue/apollo-composable": "^4.0.0-alpha.14",
+    "apollo-server-express": "^3.3.0",
     "bcrypt": "^5.0.1",
     "core-js": "^3.15.2",
     "cyrillic-to-translit-js": "^3.1.0",
     "express": "^4.17.1",
+    "graphql": "^15.5.2",
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.2",
     "nuxt": "^2.15.7",
